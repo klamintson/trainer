@@ -829,7 +829,7 @@ exports.init = init;
                 staticryptConfig = {"staticryptEncryptedMsgUniqueVariableName":"","isRememberEnabled":true,"rememberDurationInDays":90,"staticryptSaltUniqueVariableName":"a8f46e6273055ab74e034e3ad102fb81"};
 
 
-            const TR_PAYLOAD="payload-b2138b1f7c.txt";
+            const TR_PAYLOAD="payload-7d58718902.txt";
             function trStatus(t,retry){for(const id of ["tr-status","tr-status2"]){const el=document.getElementById(id);if(!el)continue;el.textContent=t;if(retry){const b=document.createElement("button");b.textContent="Try again";b.onclick=()=>location.reload();el.appendChild(document.createElement("br"));el.appendChild(b)}}}
             function trFetch(n){return fetch(TR_PAYLOAD).then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}).then(t=>{if(!/^[0-9a-f]+$/.test(t.trim()))throw new Error("bad data");staticryptConfig.staticryptEncryptedMsgUniqueVariableName=t.trim();return true}).catch(e=>{if(n>0)return new Promise(r=>setTimeout(r,2000)).then(()=>trFetch(n-1));throw e})}
             const trSlow=setTimeout(()=>trStatus("Slow connection, still loading…"),4000);
