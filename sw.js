@@ -1,4 +1,4 @@
-const CACHE="trainer-1237fd3fdc";
+const CACHE="trainer-60430dab22";
 const PAGE="./";
 const ASSETS=["./manifest.webmanifest","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png"];
 // iOS Safari refuses a page response that went through a redirect ("Response served by service worker has redirections"),
